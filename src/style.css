@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Marvel:ital,wght@1,700&family=Ubuntu:ital,wght@1,300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  color: #cdcdcd;
+}
+
+/* Style bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #23253a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b1010bf;
+  border-radius: 10px;
+}
+
+/* Body and more */
+body {
+  --opacidad-negro: 0.7;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, var(--opacidad-negro)),
+      rgba(0, 0, 0, var(--opacidad-negro))
+    ),
+    url("../imgs/bg/bgSpider.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.svg {
+  position: absolute;
+  width: 900px;
+  height: 650px;
+  top: 90px;
+  left: 460px;
+}
+.svg1 {
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  left: 700px;
+}
+
+.redFont {
+  color: rgb(255, 75, 87);
+}
+
+.mitad {
+  width: 50%;
+}
+
+.btn {
+  background: #6b1010bf;
+  width: 50%;
+  height: 50px;
+  margin: 5px 0 10px 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #6e1616bf;
+}
+
+/* Navegation styles */
+.navegation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #6b1010bf;
+
+  height: 80px;
+  width: 100%;
+}
+
+.navegation .navegation--logo {
+  margin-left: 10vw;
+  position: absolute;
+  padding: 5px 10px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.navegation--links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+
+  width: 30vw;
+  margin-right: 5vw;
+}
+
+.navegation--links__link a {
+  color: #cdcdcd;
+}
+
+.navegation--links__link:hover a,
+.navegation--links__link.activate {
+  border-bottom: #efefef solid 1px;
+  transition: 0.5s;
+}
+
+.navegation--checkbtn img {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  color: #fff;
+  width: 40px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  filter: invert(1);
+}
+
+#check {
+  display: none;
+}
+
+/* Header styles */
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+.header--span__typed {
+  color: #ea2340;
+  font-size: 1.5rem;
+}
+
+.header--h1 {
+  font-size: 5rem;
+}
+
+.header .franklin {
+  width: 350px;
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  padding: 0 10%;
+  z-index: 50;
+  overflow: hidden;
+}
+
+/* Franklin section */
+.main--franklin {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.main--franklin h2 {
+  display: inline;
+  font-size: 3em;
+  width: 250px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: rgb(255, 75, 87) solid 2px;
+}
+
+.main--franklin--content {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.main--franklin--content h3 {
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.main--franklin--content p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.main--franklin--info {
+  width: 50%;
+}
+
+.main--franklin .franklin {
+  width: 290px;
+}
+
+/* Bebidas section */
+.main--bebidas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 70px;
+
+  height: 70vh;
+}
+
+.main--bebidas h2 {
+  display: inline;
+  width: 190px;
+  font-size: 3em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.conteiner--carrusel {
+  width: 70vw;
+}
+
+.carrusel {
+  display: flex;
+  z-index: 100;
+  gap: 49vw;
+  overflow: hidden;
+  position: relative;
+}
+
+#imagen {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+}
+
+.imagen {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+#imagen img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 100px;
+}
+
+.carrusel .btn {
+  background: #6b1010;
+  border-radius: 5px;
+  height: 185px;
+  z-index: 100;
+}
+
+.btn img {
+  width: 120px;
+  z-index: 100;
+  /* height: 300px; */
+}
+
+/* Contact Section */
+
+.main--contact {
+  display: flex;
+}
+
+.main--contact--form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  margin-bottom: 100px;
+}
+
+.main--contact--audio {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+.main--contact--audio p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.main--contact h3 {
+  font-size: 2.5em;
+}
+
+.main--contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main--contact input {
+  padding: 10px;
+  font-size: 15px;
+  color: #1c1d24;
+  width: 50%;
+  height: 50px;
+}
+
+.main--contact textarea {
+  padding: 10px;
+  font-size: 15px;
+  color: #1c1d24;
+  width: 50%;
+  height: 50px;
+}
+
+/* Congratulation section */
+.main--agradecimiento {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.main--agradecimiento img {
+  width: 850px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.main--agradecimiento h2 {
+  display: inline;
+  font-size: 3em;
+  width: 530px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: rgb(255, 75, 87) solid 2px;
+}
+
+.main--agradecimiento p {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 15vh;
+  background: #6b1010bf;
+}
+
+.footer .footer--icons img {
+  width: 45px;
+  filter: invert(1);
+}
+.footer .footer--divs img {
+  width: 80px;
+}
+
+.footer--copy {
+  text-align: center;
+}
+
+.footer--icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 45px;
+}
+
+.footer--divs {
+  width: 240px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  /* ESTILOS DEL NAV */
+  .navegation--checkbtn img {
+    display: block;
+  }
+
+  .navegation--links {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #590d0d;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.5s;
+  }
+
+  .navegation--links__link {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .navegation--links__link a {
+    font-size: 20px;
+  }
+
+  .navegation--links__link:hover a,
+  .navegation--links__link.activate {
+    background: none;
+    color: #ff0d45;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  /* Header Style */
+}
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+  .svg--header {
+    display: none;
+  }
+  .svg--section1 {
+    display: none;
+  }
+  /* Header Style */
+  .header--h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .header--h2,
+  .header--span__typed {
+    font-size: 1.25rem;
+  }
+
+  .header--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .header .btn {
+    font-size: 1.5rem;
+  }
+  /* Main */
+  .main {
+    gap: 90px;
+  }
+  /* Franklin section */
+  .main--franklin--content {
+    flex-direction: column;
+  }
+  .main--franklin--info {
+    width: 100%;
+  }
+  .main--franklin--content p {
+    font-size: 1.3rem;
+  }
+  .main--franklin h2 {
+    font-size: 2.5em;
+  }
+
+  .main--franklin--content h3 {
+    font-size: 2.2em;
+  }
+
+  /* Bebidas section */
+  .main--bebidas {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .main--bebidas h2 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+  }
+
+  #imagen {
+    gap: 0px;
+    left: 40px;
+  }
+
+  .carrusel .btn {
+    height: 155px;
+  }
+
+  #imagen img {
+    width: 87px;
+  }
+
+  .btn img {
+    width: 35px;
+    z-index: 100;
+  }
+
+  /* Contact section */
+  .main--contact {
+    width: 100%;
+    flex-direction: column;
+  }
+  .main--contact--audio,
+  .main--contact--form {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .main--contact h3 {
+    font-size: 2.3em;
+  }
+  .main--contact--audio p {
+    font-size: 1.2rem;
+  }
+
+  .main--contact--form input,
+  .main--contact--form textarea,
+  .main--contact--form .btn {
+    width: 100%;
+  }
+
+  /* Congratulation section */
+  .main--agradecimiento h2 {
+    font-size: 2em;
+    width: 300px;
+  }
+
+  .main--agradecimiento img {
+    width: 300px;
+  }
+
+  .main--agradecimiento p {
+    font-size: 1rem;
+    font-family: math;
+  }
+
+  /* Footer */
+  .footer .footer--divs {
+    width: 100px;
+  }
+  .footer .footer--icons img {
+    width: 30px;
+  }
+  .footer--icons {
+    gap: 10px;
+  }
+}
